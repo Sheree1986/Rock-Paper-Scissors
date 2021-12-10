@@ -11,30 +11,37 @@ public class GameBoard {
         int ties = 0;
 
 
-
+        System.out.println("Welcome to Rock, Paper, Scissors!");
+        System.out.println("MAIN MENU");
+        System.out.println("================");
+        System.out.println("1. Type 'play' to play");
+        System.out.println("2. Type 'history' to view your game history.");
+        System.out.println("3. Type 'quit' to stop playing.");
+        System.out.println();
 
         // while loop to allow user to continue playing. For loop isn't used since we don't know
 
 
         while(true) {
 
-        System.out.println("Welcome to Rock, Paper, Scissors!");
-        System.out.println("MAIN MENU");
-        System.out.println("1. Type 'play' to play");
-        System.out.println("2. Type 'history' to view your game history.");
-        System.out.println("3. Type 'quit' to stop playing.");
-        System.out.println("Please begin the game by entering your first move. choices are rock, paper, or scissors. If you would like to quit, please enter quit.");
+
+
         //Handle incorrect capitalization of otherwise valid user input ("rock," "Rock," "RoCk," "ROCK," and more).
         String playerMove = in.nextLine().toLowerCase();
 
             if(playerMove.equals("quit")) {
                 break;
             }
+            if(playerMove.equals("history")) {
+                break;
+            }
+            if(playerMove.equals("play")) {
+                System.out.println("Please begin the game by entering your first move. choices are rock, paper, or scissors. If you would like to quit, please enter quit.");
+
+            }
 
             // validation of moves
-//            if(playerMove.equals("play")) {
-//
-//            }
+
             if (!playerMove.equals("rock") && !playerMove.equals("paper") && !playerMove.equals("scissors")) {
               //Handle invalid user input.
                 System.out.println("This is not a valid move, please chose: rock, paper or scissors");
